@@ -29,8 +29,28 @@ Conatiner images are public at Docker hub:
 * [Green](https://hub.docker.com/repository/docker/smidra/green-dwarf)
 
 
-Deploy with Kubernetes
-----------------------
+Deploy with Kubernetes (imperative)
+-----------------------------------
+``` bash
+# Deploy resources
+kubectl create deployment blue-dwarf --image=smidra/blue-dwarf
+kubectl expose deployment blue-dwarf --name=blue-dwarf-svc --type=NodePort --port=80
+```
+If deploying with minikube...
+``` bash
+# Watch for the assigned XYZ high port
+kubectl get services
+# Get minikube cluster ip
+minikube ip
+```
+
+The dwarf shall be available at http://cluster-ip:XYZ
+
+
+Deploy with Kubernetes (declarative)
+------------------------------------
+Add to cluster with ```kubectl apply -f ...```
+
 Blue dwarf service:
 ``` yaml
 apiVersion: v1
@@ -45,7 +65,7 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30010
+      nodePort: 30073
 ```
 
 Blue dwarf deployment:
@@ -74,7 +94,7 @@ spec:
       terminationGracePeriodSeconds: 4
 ```
 
-The dwarf shall be available at http://cluster-ip:30010
+The dwarf shall be available at http://cluster-ip:30073
 
 
 Is it any good?
