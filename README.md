@@ -61,6 +61,8 @@ spec:
       terminationGracePeriodSeconds: 4
 ```
 
+The dwarf shall be available at http://cluster-ip:30010
+
 
 Is it any good?
 ---------------
