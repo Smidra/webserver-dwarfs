@@ -6,7 +6,7 @@ What is this?
 -------------
 This repository defines four distinquished webpages with colored dwarfs and dockerfiles for deployment with nginx.
 
-![Ori](blue-dwarf/static/dwarf-blue-small.png | width=100)
+![Ori](https://github.com/Smidra/webserver-dwarfs/blob/3d41fcffe276966c829c8d5d6dd6e4ad8ce4eb5b/blue-dwarf/static/dwarf-blue-small.png | width=100)
 
 Why is this?
 -------------
