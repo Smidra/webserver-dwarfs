@@ -6,6 +6,7 @@ What is this?
 -------------
 This repository defines four distinquished webpages with colored dwarfs and dockerfiles for deployment with nginx.
 
+![]( blue-dwarf/static/dwarf-blue-small.png | width=100)
 
 Why is this?
 -------------
