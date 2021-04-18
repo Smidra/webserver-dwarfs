@@ -23,10 +23,10 @@ The dwarf shall be available at http://localhost:8099
 
 Dockerfiles are present in each of the color-folders.
 Conatiner images are public at Docker hub:
-* [Blue](https://hub.docker.com/repository/docker/smidra/blue-dwarf)
-* [Red](https://hub.docker.com/repository/docker/smidra/red-dwarf)
-* [Yellow](https://hub.docker.com/repository/docker/smidra/yellow-dwarf)
-* [Green](https://hub.docker.com/repository/docker/smidra/green-dwarf)
+* [Blue](https://hub.docker.com/r/smidra/blue-dwarf)
+* [Red](https://hub.docker.com/r/smidra/red-dwarf)
+* [Yellow](https://hub.docker.com/r/smidra/yellow-dwarf)
+* [Green](https://hub.docker.com/r/smidra/green-dwarf)
 
 
 Deploy with Kubernetes (imperative)
