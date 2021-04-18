@@ -12,9 +12,22 @@ Why is this?
 -------------
 When deploying contianers, for example to Kubernetes, one often deploys a small webserver "just to see it works". This project provides a playful alternative to the default webpage that says "Welcome to nginx" or "It works!".
 
-Deploy with docker
+Deploy with Docker
 ------------------
-TBA
+For deployment locally use:
+``` bash
+docker pull smidra/blue-dwarf
+docker run -p 8099:80 --name blue-dwarf smidra/blue-dwarf
+```
+The dwarf shall be available at http://localhost:8099
+
+Dockerfiles are present in each of the color-folders.
+Conatiner images are public at Docker hub:
+* [Blue](https://hub.docker.com/repository/docker/smidra/blue-dwarf)
+* [Red](https://hub.docker.com/repository/docker/smidra/red-dwarf)
+* [Yellow](https://hub.docker.com/repository/docker/smidra/yellow-dwarf)
+* [Green](https://hub.docker.com/repository/docker/smidra/green-dwarf)
+
 
 Deploy with Kubernetes
 ----------------------
