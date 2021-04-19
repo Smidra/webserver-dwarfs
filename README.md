@@ -1,16 +1,29 @@
 Webserver Dwarfs
 ================
-Tired of seeing "hello nginx" when deploying test containers? Why not use dwarfs?
+*Tired of seeing "hello nginx" when deploying test containers? Why not use dwarfs?*
 
 What is this?
 -------------
-This repository defines four distinquished webpages with colored dwarfs and dockerfiles for deployment with nginx.
+This repository defines four distinquished webpages with colored dwarfs and docker containers for deployment with nginx.
 
 <img src="blue-dwarf/static/dwarf-blue-small.png" width="60" alt="Ori"><img src="red-dwarf/static/dwarf-red-small.png" width="60" alt="Kili"><img src="yellow-dwarf/static/dwarf-yellow-small.png" width="60" alt="Dvalin"><img src="green-dwarf/static/dwarf-green-small.png" width="60" alt="Bifur">
 
 Why is this?
 -------------
 When deploying contianers, for example to Kubernetes, one often deploys a small webserver "just to see it works". This project provides a playful alternative to the default webpage that says "Welcome to nginx" or "It works!".
+
+Docker hub images
+-----------------
+The docker images conatain a plain nginx image with the HTML files copied inside. Dockerfiles are present in each of the color-folders. Container images are public at Docker hub:
+* [Blue dwarf container](https://hub.docker.com/r/smidra/blue-dwarf)
+  * ``` smidra/blue-dwarf ```
+* [Red dwarf container](https://hub.docker.com/r/smidra/red-dwarf)
+  * ``` smidra/red-dwarf ```
+* [Yellow dwarf container](https://hub.docker.com/r/smidra/yellow-dwarf)
+  * ``` smidra/yellow-dwarf ```
+* [Green dwarf container](https://hub.docker.com/r/smidra/green-dwarf)
+  * ``` smidra/green-dwarf ```
+
 
 Deploy with Docker
 ------------------
@@ -20,13 +33,6 @@ docker pull smidra/blue-dwarf
 docker run -p 8099:80 --name blue-dwarf smidra/blue-dwarf
 ```
 The dwarf shall be available at http://localhost:8099
-
-Dockerfiles are present in each of the color-folders.
-Conatiner images are public at Docker hub:
-* [Blue](https://hub.docker.com/r/smidra/blue-dwarf)
-* [Red](https://hub.docker.com/r/smidra/red-dwarf)
-* [Yellow](https://hub.docker.com/r/smidra/yellow-dwarf)
-* [Green](https://hub.docker.com/r/smidra/green-dwarf)
 
 
 Deploy with Kubernetes (imperative)
@@ -95,17 +101,6 @@ spec:
 ```
 
 The dwarf shall be available at http://cluster-ip:30073
-
-Docker hub images
------------------
-The docker images conatain only an nginx image with the HTMl files copied inside.
-``` bash
-smidra/blue-dwarf
-smidra/red-dwarf
-smidra/yellow-dwarf
-smidra/green-dwarf
-```
-
 
 Is it any good?
 ---------------
