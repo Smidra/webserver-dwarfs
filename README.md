@@ -14,7 +14,7 @@ When deploying contianers, for example to Kubernetes, one often deploys a small 
 
 Deploy with Docker
 ------------------
-For deployment locally use:
+For deployment of the **blue dwarf** locally use:
 ``` bash
 docker pull smidra/blue-dwarf
 docker run -p 8099:80 --name blue-dwarf smidra/blue-dwarf
@@ -96,8 +96,25 @@ spec:
 
 The dwarf shall be available at http://cluster-ip:30073
 
+Docker hub images
+-----------------
+The docker images conatain only an nginx image with the HTMl files copied inside.
+``` bash
+smidra/blue-dwarf
+smidra/red-dwarf
+smidra/yellow-dwarf
+smidra/green-dwarf
+```
+
 
 Is it any good?
 ---------------
 [Yes](https://news.ycombinator.com/item?id=3067434)
 
+Credits
+-------
+[Garden Gnome Clip art by LA](https://sweetclipart.com/garden-gnome-clip-art/) is used under the tems of [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+HTML index is based on the [bootstrap sign in example](https://getbootstrap.com/docs/4.0/examples/sign-in/)
+
+This work is lincensed under the MIT licence, mainly because the Greater Lunduke Lincese is not a real thing.
